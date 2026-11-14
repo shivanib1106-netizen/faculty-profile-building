@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Responsive Breakpoints & Media Queries
+   ========================================================================== */
+
+/* Large Tablets & Small Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-row-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-content-area {
+    padding: 1.5rem;
+  }
+}
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+  /* Hide static sidebar by default and display as mobile drawer */
+  .app-sidebar {
+    transform: translateX(-100%);
+    box-shadow: none;
+  }
+
+  .app-sidebar.sidebar-open {
+    transform: translateX(0);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .sidebar-overlay.overlay-visible {
+    display: block;
+  }
+
+  .main-content-wrapper {
+    margin-left: 0 !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .app-navbar {
+    padding: 0 1rem;
+  }
+
+  .navbar-academic-year {
+    display: none;
+  }
+
+  .page-content-area {
+    padding: 1rem;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .page-header-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .grid-4, .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row, .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .score-hero-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .welcome-banner {
+    padding: 1.25rem;
+  }
+
+  .welcome-name {
+    font-size: 1.35rem;
+  }
+
+  .welcome-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .table-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-inputs-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input-wrapper {
+    min-width: 100%;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-item-full {
+    grid-column: span 1;
+  }
+
+  .info-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .score-category-figures {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .faculty-summary-header {
+    align-items: flex-start;
+  }
+
+  .report-panel-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .report-panel-actions {
+    justify-content: flex-start;
+  }
+
+  .demo-strip {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Small Mobile Screens (<= 480px) */
+@media (max-width: 480px) {
+  .app-navbar {
+    padding: 0 0.75rem;
+  }
+
+  .navbar-user-meta {
+    display: none;
+  }
+
+  .notifications-dropdown {
+    width: calc(100vw - 20px);
+    right: -10px;
+  }
+
+  .auth-body {
+    padding: 1.25rem;
+  }
+
+  .auth-header {
+    padding: 1.5rem 1.25rem 1rem;
+  }
+
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+}

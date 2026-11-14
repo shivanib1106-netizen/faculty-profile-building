@@ -1,0 +1,243 @@
+/* ==========================================================================
+   Admin management pages and shared management cards
+   ========================================================================== */
+
+.stat-card-compact {
+  padding: 1rem 1.1rem;
+}
+
+.stat-card-compact .stat-card-value {
+  font-size: 1.45rem;
+}
+
+.faculty-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.faculty-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  min-width: 0;
+  transition: box-shadow var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.faculty-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.faculty-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.faculty-card-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary-navy), var(--primary-blue));
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.faculty-card-identity {
+  flex: 1;
+  min-width: 0;
+}
+
+.faculty-card-name {
+  font-size: 0.95rem;
+  color: var(--primary-navy);
+  margin: 0 0 0.15rem;
+  word-break: break-word;
+}
+
+.faculty-card-role {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.faculty-card-id {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin: 0.15rem 0 0;
+}
+
+.faculty-card-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  background: var(--bg-app);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.7rem;
+}
+
+.faculty-card-stats dt {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.faculty-card-stats dd {
+  margin: 0.1rem 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.category-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.category-admin-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.category-admin-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.category-admin-head h3 {
+  font-size: 0.95rem;
+  color: var(--primary-navy);
+  margin: 0.35rem 0 0;
+  line-height: 1.35;
+}
+
+.category-admin-count {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.rule-section {
+  margin-bottom: 1.5rem;
+}
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.settings-card {
+  overflow: hidden;
+}
+
+.settings-card .academic-card-header:not(:first-child) {
+  border-top: 1px solid var(--border-color);
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-app);
+  flex-wrap: wrap;
+}
+
+.settings-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.settings-note {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Demo credential panel on the login page */
+.demo-credentials-box {
+  margin-top: 1.25rem;
+  padding: 0.9rem 1rem;
+  border: 1px dashed #f59e0b;
+  border-radius: var(--radius-md);
+  background: #fffbeb;
+}
+
+.demo-credentials-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: 0.4rem;
+}
+
+.demo-credentials-note {
+  font-size: 0.75rem;
+  color: #92400e;
+  margin: 0 0 0.5rem;
+  line-height: 1.5;
+}
+
+.demo-credentials-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.75rem;
+  color: #78350f;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* Component integration: buttons used as navigation targets */
+.sidebar-link-button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navbar-user-section {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+}
