@@ -1,0 +1,43 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Pytest and coverage
+.pytest_cache/
+.coverage
+coverage/
+coverage.xml
+htmlcov/
+
+# Local environment and database secrets
+.env
+.env.local
+.env.*.local
+mysql-local.ini
+.mysql-data/
+
+# Flask instance and databases
+instance/
+*.sqlite
+*.sqlite3
+*.db
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Uploaded documents and test artifacts
+uploads/*
+!uploads/.gitkeep
+tests/test_uploads/*
+!tests/test_uploads/.gitkeep
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+*.log
